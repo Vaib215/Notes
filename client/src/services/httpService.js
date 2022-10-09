@@ -2,7 +2,7 @@ import axios from 'axios';
 
 axios.interceptors.request.use(
   function (config) {
-    config.baseURL = 'http://localhost:3333';
+    config.baseURL = 'https://notes-server-xkt1.onrender.com/';
     config.withCredentials = true;
     return config;
   },

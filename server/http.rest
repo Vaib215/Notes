@@ -1,5 +1,5 @@
 # Register new user
-POST http://localhost:3333/auth/register HTTP/1.1
+POST https://notes-server-xkt1.onrender.com/auth/register HTTP/1.1
 content-type: application/json
 
 {
@@ -11,7 +11,7 @@ content-type: application/json
 ###
 
 # Login to existing
-POST http://localhost:3333/auth/login HTTP/1.1
+POST https://notes-server-xkt1.onrender.com/auth/login HTTP/1.1
 content-type: application/json
 
 {
@@ -22,7 +22,7 @@ content-type: application/json
 ###
 
 # Update user profile
-PUT http://localhost:3333/user/633c8cfe3980a0303cd9e749 HTTP/1.1
+PUT https://notes-server-xkt1.onrender.com/user/633c8cfe3980a0303cd9e749 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -32,19 +32,19 @@ Content-Type: application/json
 ###
 
 # Delete user profile
-DELETE http://localhost:3333/user/633c8cfe3980a0303cd9e749 HTTP/1.1
+DELETE https://notes-server-xkt1.onrender.com/user/633c8cfe3980a0303cd9e749 HTTP/1.1
 Content-Type: application/json
 
 ###
 
 # Get user profile
-GET http://localhost:3333/user HTTP/1.1
+GET https://notes-server-xkt1.onrender.com/user HTTP/1.1
 Content-Type: application/json
 
 ###
 
 # Add new notes
-POST http://localhost:3333/notes/ HTTP/1.1
+POST https://notes-server-xkt1.onrender.com/notes/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -56,17 +56,17 @@ Content-Type: application/json
 ###
 
 # Get notes
-GET http://localhost:3333/notes/633c8ec36455d43498de09fb HTTP/1.1
+GET https://notes-server-xkt1.onrender.com/notes/633c8ec36455d43498de09fb HTTP/1.1
 Content-Type: application/json
 
 ###
 
 # Get notes by query
-GET http://localhost:3333/notes/search?q=demo HTTP/1.1
+GET https://notes-server-xkt1.onrender.com/notes/search?q=demo HTTP/1.1
 Content-Type: application/json
 
 ###
 
 # Get notes by query
-GET http://localhost:3333/notes/all HTTP/1.1
+GET https://notes-server-xkt1.onrender.com/notes/all HTTP/1.1
 Content-Type: application/json
