@@ -53,7 +53,7 @@ const DisplayNote = () => {
                         <span className="text-2xl">Content</span>
                     </label>
                     <div className="container flex border border-primary rounded-lg min-h-[16em] p-4 lg:p-8" id="content">
-                        <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />
+                        <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap',background:'transparent', color:'inherit' }} />
                     </div>
                 </div>
                 <div className="btn-group p-4 lg:px-32">

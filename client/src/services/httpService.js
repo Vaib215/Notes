@@ -3,7 +3,11 @@ import axios from 'axios';
 axios.interceptors.request.use(
   function (config) {
     config.baseURL = 'https://notes-server-xkt1.onrender.com/';
-    config.withCredentials = true;
+    // set headers
+    config.headers = {
+      'token': localStorage.getItem('token'),
+      ...config.headers,
+    };
     return config;
   },
   function (error) {

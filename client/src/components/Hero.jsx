@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "./Alert";
-import logoutUser from "../services/logout";
 
 const Hero = ({ logout }) => {
     const [alert, setAlert] = useState(null)
     const navigate = useNavigate()
     const doLogout = async () => {
-        await logoutUser().then(res => {
-            localStorage.setItem("isLoggedIn", "false");
+        try {
+            localStorage.removeItem('isLoggedIn')
+            localStorage.removeItem("token")
             setAlert(true)
             setTimeout(() => {
                 setAlert(null)
-                navigate('/')
+                window.location.href = "/"
             }, 1000)
-        })
-            .catch(err => {
+        }
+        catch {
+            ((err) => {
                 setAlert(false)
                 setTimeout(() => {
                     setAlert(null)
                 }, 1000)
             })
+        }
     }
     useEffect(() => {
         if (logout) {

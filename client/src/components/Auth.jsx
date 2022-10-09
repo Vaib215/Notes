@@ -17,6 +17,7 @@ const Auth = ({ type }) => {
             })
                 .then(res => {
                     setIsAuthenticated(true)
+                    localStorage.setItem('token', res.data.token)
                     localStorage.setItem("isLoggedIn", "true")
                     setTimeout(() => {
                         setIsAuthenticated(null)

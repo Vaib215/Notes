@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auth.js";
 import noteRoutes from "./routes/notes.js"
-import cookieParser from "cookie-parser";
 import cors from "cors";
 
 dotenv.config();
@@ -18,12 +17,7 @@ const connect = async () => {
     })
 };
 
-
-app.use(cookieParser());
-app.use(cors({
-    origin: true,
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/user', userRoutes);

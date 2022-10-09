@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import DisplayNote from "./DisplayNote"
 import Greet from "./Greet"
@@ -9,8 +9,12 @@ import ThemesList from "./ThemesList"
 
 const NotesList = ({ name }) => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-    document.querySelector('html').setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    useEffect(() => {
+        document.querySelector('html').setAttribute('data-theme', theme)
+        localStorage.setItem('theme', theme)
+        document.documentElement.setAttribute('data-color-mode', 'light')
+    })
+    
     return (
         <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />

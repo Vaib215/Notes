@@ -23,16 +23,8 @@ export const loginUser = async (req, res, next) => {
         if(!isCorrect) return next(createError(400,"Wrong Credentials!"));
         const token = jwt.sign({id:user._id},process.env.JWT_SECRET)
         const {password, ...others} = user._doc;
-        res.cookie("access_token",token,{
-            httpOnly:true
-        })
-        .status(200)
-        .json(others)
+        res.status(200).json({...others,"token":token});
     } catch (err) {
         next(err);
     }
-}
-
-export const logoutUser = (req, res, next) => {
-    res.clearCookie("access_token").send("User logged out");
 }
