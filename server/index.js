@@ -21,7 +21,7 @@ const connect = async () => {
 
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://notes-by-vaib.vercel.app/",
+    origin: true,
     credentials: true
 }));
 app.use(express.json());
