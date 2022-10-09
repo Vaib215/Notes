@@ -15,13 +15,11 @@ const Hero = ({ logout }) => {
                 window.location.href = "/"
             }, 1000)
         }
-        catch {
-            ((err) => {
-                setAlert(false)
-                setTimeout(() => {
-                    setAlert(null)
-                }, 1000)
-            })
+        catch (err) {
+            setAlert(false)
+            setTimeout(() => {
+                setAlert(null)
+            }, 1000)
         }
     }
     useEffect(() => {
