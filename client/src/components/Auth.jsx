@@ -67,7 +67,7 @@ const Auth = ({ type }) => {
     return (
         <>
             <Breadcrumb nav={`/${type}`} home/>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-[90vh] bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         {(type === "login") ? (

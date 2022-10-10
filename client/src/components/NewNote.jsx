@@ -68,21 +68,22 @@ const NewNote = () => {
     }
     return (
         <>
+            
             {edit && <Breadcrumb nav={`/home/edit/${title}`} notes={edit} />}
             {!edit && <Breadcrumb nav={'/home/create'} />}
-            <form onSubmit={edit?editNote:addNewNote} className="mx-auto container flex flex-col justify-center items-center md:items-start gap-4 md:px-32">
+            <form onSubmit={edit ? editNote : addNewNote} className="mx-auto container flex flex-col justify-center items-center md:items-start gap-4 md:px-32">
                 <div className="flex flex-col md:flex-row gap-2">
                     <div className="form-control gap-2 lg:mx-0">
                         <label htmlFor="title" className="label">
                             <span className="text-lg">Title </span>
                         </label>
-                        <input id="title" name="title" type="text" placeholder="The best way to sell things" value={title} onChange={(e)=>{setTitle(e.target.value)}} className="input input-bordered w-fit" />
+                        <input id="title" name="title" type="text" placeholder="The best way to sell things" value={title} onChange={(e) => { setTitle(e.target.value) }} className="input input-bordered w-fit" />
                     </div>
                     <div className="form-control gap-2 lg:mx-0">
                         <label htmlFor="tags" className="label">
                             <span className="text-lg">Tags</span>
                         </label>
-                        <input id="tags" name="tags" type="text" placeholder="Seperate using comma ( , )" className="input input-bordered w-fit" value={tags} onChange={e=>setTags(e.target.value)}/>
+                        <input id="tags" name="tags" type="text" placeholder="Seperate using comma ( , )" className="input input-bordered w-fit" value={tags} onChange={e => setTags(e.target.value)} />
                     </div>
                 </div>
                 <div className="form-control gap-2 w-full max-w-[90vw]">

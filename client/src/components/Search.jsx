@@ -30,7 +30,7 @@ const Search = () => {
             <ul className="notes-wrapper grid place-items-center mb-4 gap-y-8 lg:mb-8 md:grid-cols-2 lg:grid-cols-3">
                 {results.map((result, index) => {
                     return (
-                        <div key={index} className="card bg-base-200 shadow-md shadow-primary">
+                        <div key={index} className="card w-42 md:w-96 h-[16em] bg-base-200 shadow-md shadow-primary">
                             <div className="card-body">
                                 <h3 className="text-3xl font-semibold">{result[1].title}</h3>
                                 <div className="flex flex-wrap-reverse gap-2">

@@ -36,7 +36,7 @@ const Greet = ({ name }) => {
                 {/* Map notes */}
                 {notes.map((note, index) => {
                     return (
-                        <li key={index} className="card min-w-64 w-96 h-[16em] bg-base-200 shadow-md shadow-primary">
+                        <li key={index} className="card md:w-96 h-[16em] bg-base-200 shadow-md shadow-primary">
                             <div className="card-body">
                                 <h3 className="text-3xl font-semibold">{note.title}</h3>
                                 <div className="flex flex-wrap-reverse gap-2">

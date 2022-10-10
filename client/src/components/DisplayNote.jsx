@@ -29,7 +29,7 @@ const DisplayNote = () => {
         <>
             <Breadcrumb nav={`/home/${title}`} notes={id} />
             <form>
-                <div className="flex flex-col lg:px-32 lg:flex-row gap-2">
+                <div className="flex flex-col px-4 lg:px-32 lg:flex-row gap-2">
                     <div className="form-control gap-2 py-4 w-full max-w-xs">
                         <label htmlFor="title" className="label">
                             <span className="text-lg">Title </span>
@@ -53,7 +53,7 @@ const DisplayNote = () => {
                         <span className="text-2xl">Content</span>
                     </label>
                     <div className="container flex border border-primary rounded-lg min-h-[16em] p-4 lg:p-8" id="content">
-                        <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap',background:'transparent', color:'inherit' }} />
+                        <MDEditor.Markdown source={content} style={{ background:'transparent', color:'inherit' }} />
                     </div>
                 </div>
                 <div className="btn-group p-4 lg:px-32">
